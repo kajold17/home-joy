@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import './variable.scss';
+*{
+    font-family: $font-family;
+}
+
+.bg-primary{
+    background-color: $primary-color!important;
+}
+.text-primary{
+    color: $primary-color!important;
+}
+.text-white{
+    color: $white-color!important;
+}
+
+.text-lg{
+    font-size: 26px;
+}
+.text-normal{
+    font-size: 18px;
+}
+.fw-300{
+    font-weight: 300;
+}
+
+.CTA-primary{
+    background-color: $primary-color!important;
+    color: $white-color!important;
+    border-radius: 8px;
+    padding: 14px 40px;
+}
