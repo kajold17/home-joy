@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, FormArray, Validators, FormControl, } from '@angular/forms';
+import{ HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-signup',
@@ -7,12 +9,42 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  public signUpForm: any;
+
+  
+  // public signUpFrom:any;
+  
+
+  constructor(
+    private formBuilder: FormBuilder,
+    private http: HttpClient,
+  ) { }
 
   ngOnInit(): void {
+    this.initForm();
+  }
+
+  initForm() {
+    this.signUpForm = this.formBuilder.group({
+      name: ['',Validators.required],
+      email: ['',Validators.required],
+      password: ['',Validators.required],
+      confirmPassword: ['',Validators.required],
+    })
   }
 
   onSubmit(){
-    
+    console.log(this.signUpForm.value);
+    const userDetails = {
+      name: this.signUpForm.value.name,
+      email: this.signUpForm.value.email,
+      password: this.signUpForm.value.password
+    }
+    this.http.post('http://localhost:9000/users',userDetails,{})
+      .subscribe((res)=>{
+        console.log(res);
+      });
+
+
   }
 }
