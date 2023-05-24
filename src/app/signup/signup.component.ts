@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, Validators, FormControl, } from '@angular/forms';
 import{ HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-signup',
@@ -10,7 +11,6 @@ import{ HttpClient } from '@angular/common/http';
 export class SignupComponent implements OnInit {
 
   public signUpForm: any;
-
   
   // public signUpFrom:any;
   
@@ -44,7 +44,5 @@ export class SignupComponent implements OnInit {
       .subscribe((res)=>{
         console.log(res);
       });
-
-
   }
 }
