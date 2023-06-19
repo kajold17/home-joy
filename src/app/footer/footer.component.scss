@@ -1,0 +1,21 @@
+@import '../../variable.scss';
+
+.footer-section{
+    background-color: $primary-color;
+    height: 300px;
+}
+.social-btn{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: $text-secondary;
+    border: 0;
+}
+
+.footer-nav-link{
+    &:hover{
+        color: $white-color!important;
+        text-decoration: underline;
+    }
+}

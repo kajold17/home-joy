@@ -1,67 +1,112 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~swiper/modules/navigation/navigation.min.css';
+@import '~swiper/modules/pagination/pagination.min.css';
 @import './variable.scss';
-*{
-    font-family: $font-family;
-    // background-color: $bg-color;
+
+* {
+  font-family: $font-family;
+  // background-color: $bg-color;
 }
 
-.bg-primary{
-    background-color: $primary-color!important;
-}
-.bg-color{
-    background-color: $bg-color!important;
-}
-.text-primary{
-    color: $primary-color!important;
-}
-.text-white{
-    color: $white-color!important;
-}
-.body-px{
-    padding-left: 6%;
-    padding-right: 6%;
-}
-.text-mute{
-    color: $text-mute!important;
-}
-.text-lg{
-    font-size: 26px;
-}
-.text-normal{
-    font-size: 18px;
-}
-.fw-300{
-    font-weight: 300;
+.bg-primary {
+  background-color: $primary-color !important;
 }
 
-.CTA-primary{
-    background-color: $primary-color!important;
-    color: $white-color!important;
-    border-radius: 50px;
-    padding: 12px 42px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+.bg-color {
+  background-color: $bg-color !important;
 }
 
-.btn-primary-o{
-    background-color: $white-color!important;
-    color: $primary-color!important;
-    border: 1px solid $primary-color!important;
-    border-radius: 10px;
-    padding: 12px 42px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    &:hover{
-        background-color: $light-blue!important;
-        border: 1px solid $light-blue!important;
-        color: $primary-color!important;
+.text-primary {
+  color: $primary-color !important;
+}
+.text-secondary{
+    color: $text-secondary;
+}
+.text-white {
+  color: $white-color !important;
+}
+
+.body-px {
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.text-mute {
+  color: $text-mute !important;
+}
+
+.text-lg {
+  font-size: 26px;
+}
+
+.text-normal {
+  font-size: 18px;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.CTA-primary {
+  background-color: $primary-color !important;
+  color: $white-color !important;
+  border-radius: 50px;
+  padding: 12px 42px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.btn-primary-o {
+  background-color: $white-color !important;
+  color: $primary-color !important;
+  border: 1px solid $primary-color !important;
+  border-radius: 10px;
+  padding: 12px 42px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  &:hover {
+    background-color: $light-blue !important;
+    border: 1px solid $light-blue !important;
+    color: $primary-color !important;
+  }
+}
+
+.pointer {
+  cursor: pointer !important;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.featured-section {
+  .mySwiper {
+    padding-right: 73px;
+
+    .swiper-button-prev {
+      display: none;
     }
-}
 
-.pointer{
-    cursor: pointer!important;
-}
+    .swiper-button-next {
+      right: 0;
+      height: 100%;
+      width: 60px;
+      background-color: $bg-color;
+      bottom: 0;
+      top: auto;
+      justify-content: end;
 
-.p-relative{
-    position: relative;
+      &:after {
+        content: url('/assets/images/icon/right-arrow.svg');
+        height: 40px;
+        width: 40px;
+        font-size: 0px;
+        background: $primary-color;
+        border-radius: 50%;
+        padding: 9px;
+
+      }
+    }
+  }
 }

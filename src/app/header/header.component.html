@@ -6,32 +6,32 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav d-flex justify-content-end w-100">
-          <li class="nav-item">
-            <a class="nav-link text-normal fw-300" aria-current="page" routerActive="active" routerLink="/home">Home</a>
+        <ul class="navbar-nav d-flex justify-content-end align-items-center w-100">
+          <li class="nav-item px-2">
+            <a class="nav-link text-normal fw-300" routerLinkActive="active" routerLink="/home">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-normal fw-300" routerActive="active" routerLink="">Features</a>
+          <li class="nav-item px-2">
+            <a class="nav-link text-normal fw-300" routerLinkActive="active" routerLink="/aboutus">About Us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-normal fw-300" routerActive="active" routerLink="">Pricing</a>
+          <li class="nav-item px-2">
+            <a class="nav-link text-normal fw-300" routerLinkActive="active" routerLink="/shop">Shop</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-normal fw-300" routerActive="active" routerLink="">Shop</a>
+          <li class="nav-item px-2">
+            <a class="nav-link text-normal fw-300" routerLinkActive="active" routerLink="/contactus">Contact Us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-normal fw-300" routerActive="active" routerLink="/signup">SignUp</a>
+          <li class="nav-item px-2" *ngIf="!this.userLogin">
+            <a class="nav-link text-normal fw-300" routerLinkActive="active" routerLink="/signup">SignUp</a>
           </li>
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link text-normal fw-300 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown link
+          <li class="nav-item px-2 dropdown" *ngIf="this.userLogin">
+            <a class="nav-link text-normal fw-300 dropdown-toggle profile-dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="/assets/images/profile-default.webp" alt="profile" class="profile-img">
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Action</a></li>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
-          </li> -->
+          </li>
         </ul>
       </div>
     <!-- </div> -->

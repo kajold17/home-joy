@@ -6,6 +6,25 @@
     width: 100%;
     // background-color: transparent!important;
 }
-.nav-link{
+.nav-link.active{
+    border-bottom: 3px solid $primary-color;
     // color: $white-color;
+    // &:active{
+    //     color: $primary-color;
+    //     font-weight: 600;
+    // }
+}
+
+
+
+.profile-dropdown{
+    &::after{
+        display: none;
+    }
+}
+.profile-img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+
 }

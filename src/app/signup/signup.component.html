@@ -1,33 +1,42 @@
 <app-header></app-header>
 <div class="my-3"></div>
 <div class="row mx-0 justify-content-center">
-    <div class="col-md-10 col-lg-8">
-        <div class="container">
-            <div class="sign-up-card card">
-                <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" >
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="name" formControlName="name" placeholder="name@example.com">
-                        <label for="name">Name</label>
-                      </div>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="email" formControlName="email" placeholder="name@example.com">
-                        <label for="email">Email address</label>
-                      </div>
-                      <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="password" formControlName="password" placeholder="Password">
-                        <label for="password">Password</label>
-                      </div>
-                      <div class="form-floating">
-                        <input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword" placeholder="Password">
-                        <label for="confirmPassword">Confirm Password</label>
-                      </div>
-                      <div class="d-flex justify-content-end my-3">
-                        <button type="submit" class="btn CTA-primary">SignUp</button>
-                      </div>
-                      <small class="text-mute d-flex justify-content-end">Already have an account?<a class="text-primary mx-1" routerLink="/login"> LogIn</a></small>
-                </form>
+  <div class="col-md-10 col-lg-8">
+    <div class="container">
+      <div class="sign-up-card card">
+        <form #signUpForm="ngForm" (ngSubmit)="onSubmit(signUpForm.value)">
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" #name="ngModel" pattern="[a-zA-Z]+$" name="name" ngModel placeholder="John Doe"
+              required>
+            <label for="name">Name</label>
+            <span *ngIf="name.invalid && name.dirty" class="error-msg">Input is invalid</span>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" #email="ngModel" name="email" ngModel
+              placeholder="name@example.com" required email>
+            <label for="email">Email address</label>
+            <span *ngIf="email.invalid && email.dirty" class="error-msg">Input is invalid</span>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" #password="ngModel" name="password" [(ngModel)]="this.userPassword"
+              placeholder="Password" required minlength="3">
+            <label for="password">Password</label>
+            <span *ngIf="password.invalid && password.dirty" class="error-msg">Input is invalid</span>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" #confirmPassword="ngModel" name="confirmPassword" [(ngModel)]="this.userConfirmPassword"
+              placeholder="Confirm Password" required minlength="3">
+            <label for="confirmPassword">Confirm Password</label>
+            <span *ngIf="(confirmPassword.invalid && confirmPassword.dirty) || (this.userPassword != this.userConfirmPassword && confirmPassword.dirty)" class="error-msg">Input is invalid</span>
+          </div>
+          <div class="d-flex justify-content-end my-3">
+            <button type="submit" class="btn CTA-primary" [ngClass]="signUpForm.invalid || (this.userPassword != this.userConfirmPassword) ? 'disable-btn':''" [disabled]="signUpForm.invalid">SignUp</button>
+          </div>
+          <small class="text-mute d-flex justify-content-end">Already have an account?<a class="text-primary mx-1"
+              routerLink="/login"> LogIn</a></small>
+        </form>
 
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </div>

@@ -1,18 +1,100 @@
 <app-header></app-header>
-<div class="banner row mx-0">
-    <div class="col-md-6 body-px d-flex flex-column justify-content-evenly">
-        <div class="">
-            <h2 class="banner-heading mb-4">Exotic minimal furniture.</h2>
-            <p class="text-mute">Choose from a wide range of well-crafted premium quality wooden furniture online.</p>
-        </div>
-        <div class="mb-4">
-            <button type="button" class="btn CTA-primary">Explore</button>
-        </div>
+<div class="banner row mx-0 ">
+  <div class="col-md-6 body-px d-flex flex-column justify-content-evenly">
+    <div class="">
+      <h2 class="banner-heading mb-4">Exotic minimal furniture.</h2>
+      <p class="text-mute">Choose from a wide range of well-crafted premium quality wooden furniture online.</p>
     </div>
-    <!-- <div class="col-md-1"></div> -->
-    <div class="col-md-6 d-flex justify-content-end px-0">
-        <img src="/assets/images/banner-image.png" alt="banner" class="banner-image">
+    <div class="mb-4">
+      <button type="button" class="btn CTA-primary">Explore</button>
     </div>
+  </div>
+  <!-- <div class="col-md-1"></div> -->
+  <div class="col-md-6 d-flex justify-content-end px-0">
+    <img src="/assets/images/banner-image.png" alt="banner" class="banner-image ">
+  </div>
 </div>
 
 <!-- <p class="banner">xzsfcz</p> -->
+
+<div class="row mx-0 featured-section justify-content-between section body-px fadeIn-animate">
+  <div class="col-md-auto d-flex align-items-center">
+    <p class="mb-0 vertical-title m-0">FEATURED</p>
+  </div>  
+  <div class="col-md-9 col-lg-11">
+    <swiper [config]="this.featuredSection" [navigation]="true" class="mySwiper">
+      <ng-template swiperSlide>
+        <div class="card-container">
+          <div class="card">
+            <img src="/assets/images/bruna-cush.png" alt="bruna-cush" class="featured-card-image">
+            <p class="text-mute mb-1 text-center">Bruna Cush</p>
+            <p class="text-center mb-0">$145.60</p>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card-container">
+          <div class="card">
+            <img src="/assets/images/drop-type.png" alt="drop-type" class="featured-card-image">
+            <p class="text-mute mb-1 text-center">Drop Type</p>
+            <p class="text-center mb-0">$145.60</p>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card-container">
+          <div class="card">
+            <img src="/assets/images/backboard-3.png" alt="backboard-3" class="featured-card-image">
+            <p class="text-mute mb-1 text-center">Backboard 3</p>
+            <p class="text-center mb-0">$145.60</p>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card-container">
+          <div class="card">
+            <img src="/assets/images/bruna-cush.png" alt="bruna-cush" class="featured-card-image">
+            <p class="text-mute mb-1 text-center">Bruna Cush</p>
+            <p class="text-center mb-0">$145.60</p>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card-container">
+          <div class="card">
+            <img src="/assets/images/drop-type.png" alt="drop-type" class="featured-card-image">
+            <p class="text-mute mb-1 text-center">Drop Type</p>
+            <p class="text-center mb-0">$145.60</p>
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="card-container">
+          <div class="card">
+            <img src="/assets/images/backboard-3.png" alt="backboard-3" class="featured-card-image">
+            <p class="text-mute mb-1 text-center">Backboard 3</p>
+            <p class="text-center mb-0">$145.60</p>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+</div>
+
+<!-- <swiper [config]="this.featuredSection" class="mySwiper">
+    <ng-template swiperSlide>
+      <img src="/assets/images/backboard-3.png" alt="" class="featured-logo featured-logo-sm w-100">
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="/assets/images/backboard-3.png" alt="" class="featured-logo featured-logo-sm w-100">
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="/assets/images/backboard-3.png" alt="" class="featured-logo featured-logo-sm w-100">
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="/assets/images/backboard-3.png" alt="" class="featured-logo featured-logo-sm w-100">
+    </ng-template>
+    <ng-template swiperSlide>
+      <img src="/assets/images/backboard-3.png" alt="" class="featured-logo featured-logo-sm w-100">
+    </ng-template>
+  </swiper> -->

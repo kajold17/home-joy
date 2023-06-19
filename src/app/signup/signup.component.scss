@@ -3,3 +3,11 @@
 .sign-up-card{
     padding: 22px 50px;
 }
+
+.error-msg{
+    color: $red-color;
+}
+.disable-btn{
+    opacity: 0.5;
+    cursor: no-drop;
+}

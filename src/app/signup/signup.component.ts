@@ -11,6 +11,8 @@ import { Observable } from 'rxjs';
 export class SignupComponent implements OnInit {
 
   public signUpForm: any;
+  public userPassword: any;
+  public userConfirmPassword: any;
   
   // public signUpFrom:any;
   
@@ -25,21 +27,21 @@ export class SignupComponent implements OnInit {
   }
 
   initForm() {
-    this.signUpForm = this.formBuilder.group({
-      name: ['',Validators.required],
-      email: ['',Validators.required],
-      password: ['',Validators.required],
-      confirmPassword: ['',Validators.required],
-    })
+    // this.signUpForm = this.formBuilder.group({
+    //   name: ['',Validators.required],
+    //   email: ['',Validators.required],
+    //   password: ['',Validators.required],
+    //   confirmPassword: ['',Validators.required],
+    // })
   }
 
-  onSubmit(){
-    console.log(this.signUpForm.value);
-    const userDetails = {
-      name: this.signUpForm.value.name,
-      email: this.signUpForm.value.email,
-      password: this.signUpForm.value.password
-    }
+  onSubmit(userDetails:any){
+    console.log(userDetails);
+    // const userDetails = {
+    //   name: this.signUpForm.value.name,
+    //   email: this.signUpForm.value.email,
+    //   password: this.signUpForm.value.password
+    // }
     this.http.post('http://localhost:9000/users',userDetails,{})
       .subscribe((res)=>{
         console.log(res);

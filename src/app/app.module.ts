@@ -9,6 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SwiperModule } from 'swiper/angular';
+import { FooterComponent } from './footer/footer.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,14 +20,18 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    FooterComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SwiperModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
