@@ -30,8 +30,34 @@ export class HomeComponent implements OnInit {
         spaceBetween: 30
       },
       1024: {
+        slidesPerView: 4.8,
+        spaceBetween: 20
+      }
+    }
+  }
+
+  arrivalSection:SwiperOptions = {
+    slidesPerView: 4,
+    spaceBetween: 60,
+    loop:true,
+  // loopedSlides: 50,
+    navigation: true,
+    // autoplay: true,
+    scrollbar: {
+      draggable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 10
+      },
+      425: {
+        slidesPerView: 1.8,
+        spaceBetween: 10
+      },
+      1024: {
         slidesPerView: 4,
-        spaceBetween: 60
+        spaceBetween: 20
       }
     }
   }

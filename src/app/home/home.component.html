@@ -81,20 +81,69 @@
   </div>
 </div>
 
-<!-- <swiper [config]="this.featuredSection" class="mySwiper">
-    <ng-template swiperSlide>
-      <img src="/assets/images/backboard-3.png" alt="" class="featured-logo featured-logo-sm w-100">
-    </ng-template>
-    <ng-template swiperSlide>
-      <img src="/assets/images/backboard-3.png" alt="" class="featured-logo featured-logo-sm w-100">
-    </ng-template>
-    <ng-template swiperSlide>
-      <img src="/assets/images/backboard-3.png" alt="" class="featured-logo featured-logo-sm w-100">
-    </ng-template>
-    <ng-template swiperSlide>
-      <img src="/assets/images/backboard-3.png" alt="" class="featured-logo featured-logo-sm w-100">
-    </ng-template>
-    <ng-template swiperSlide>
-      <img src="/assets/images/backboard-3.png" alt="" class="featured-logo featured-logo-sm w-100">
-    </ng-template>
-  </swiper> -->
+<div class="row mx-0 section featured-section body-px">
+  <div class="col-md-3">
+    <img src="/assets/images/new-arrival-side-banner.png" alt="new-arrival-side-banner" class="side-banner w-100 h-100">
+  </div>
+  <div class="col-md-9 d-flex flex-column justify-content-between">
+    <h2 class="title text-center title-border-bottom pb-2 mb-3">New Arrival</h2>
+    <div class="w-100">
+      <swiper [config]="this.arrivalSection" [navigation]="true" class="mySwiper">
+        <ng-template swiperSlide>
+          <div class="card-container">
+            <div class="card">
+              <img src="/assets/images/bruna-cush.png" alt="bruna-cush" class="featured-card-image">
+              <p class="text-mute mb-1 text-center">Bruna Cush</p>
+              <p class="text-center mb-0">$145.60</p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="card-container">
+            <div class="card">
+              <img src="/assets/images/drop-type.png" alt="drop-type" class="featured-card-image">
+              <p class="text-mute mb-1 text-center">Drop Type</p>
+              <p class="text-center mb-0">$145.60</p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="card-container">
+            <div class="card">
+              <img src="/assets/images/backboard-3.png" alt="backboard-3" class="featured-card-image">
+              <p class="text-mute mb-1 text-center">Backboard 3</p>
+              <p class="text-center mb-0">$145.60</p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="card-container">
+            <div class="card">
+              <img src="/assets/images/bruna-cush.png" alt="bruna-cush" class="featured-card-image">
+              <p class="text-mute mb-1 text-center">Bruna Cush</p>
+              <p class="text-center mb-0">$145.60</p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="card-container">
+            <div class="card">
+              <img src="/assets/images/drop-type.png" alt="drop-type" class="featured-card-image">
+              <p class="text-mute mb-1 text-center">Drop Type</p>
+              <p class="text-center mb-0">$145.60</p>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template swiperSlide>
+          <div class="card-container">
+            <div class="card">
+              <img src="/assets/images/backboard-3.png" alt="backboard-3" class="featured-card-image">
+              <p class="text-mute mb-1 text-center">Backboard 3</p>
+              <p class="text-center mb-0">$145.60</p>
+            </div>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+  </div>
+</div>

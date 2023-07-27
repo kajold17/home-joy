@@ -18,7 +18,7 @@ export class SignupComponent implements OnInit {
   
 
   constructor(
-    private formBuilder: FormBuilder,
+    // private formBuilder: FormBuilder,
     private http: HttpClient,
   ) { }
 
@@ -42,7 +42,7 @@ export class SignupComponent implements OnInit {
     //   email: this.signUpForm.value.email,
     //   password: this.signUpForm.value.password
     // }
-    this.http.post('http://localhost:9000/users',userDetails,{})
+    this.http.post('http://localhost:9000/users/signup',userDetails,{})
       .subscribe((res)=>{
         console.log(res);
       });

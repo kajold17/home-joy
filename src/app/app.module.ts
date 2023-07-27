@@ -13,6 +13,7 @@ import { SwiperModule } from 'swiper/angular';
 import { FooterComponent } from './footer/footer.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactusComponent } from './contactus/contactus.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     SignupComponent,
     FooterComponent,
-    AboutusComponent
+    AboutusComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
